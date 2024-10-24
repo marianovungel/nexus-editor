@@ -5,14 +5,14 @@ import {
   Route,
   Redirect,
 } from "react-router-dom"
-import { v4 as uuidV4 } from "uuid"
+// import { v4 as uuidV4 } from "uuid"
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route path="/" exact>
-          <Redirect to={`/documents/${uuidV4()}`} />
+          <Redirect to={`/documents/:id`} />
         </Route>
         <Route path="/documents/:id">
           <TextEditor />
