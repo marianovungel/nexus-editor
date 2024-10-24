@@ -1,4 +1,6 @@
 import TextEditor from "./TextEditor"
+import Menu from "./components/Menu"
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,6 +12,7 @@ import {
 function App() {
   return (
     <Router>
+      <Menu />
       <Switch>
         <Route path="/" exact>
           <Redirect to={`/documents/:id`} />

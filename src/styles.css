@@ -1,12 +1,19 @@
+
 *, *::before, *::after {
   box-sizing: border-box;
+}
+#root{
+  width: 100%;
 }
 
 body {
   background-color: #F3F3F3;
   margin: 0;
 }
-
+.container{
+  width: 100%;
+  margin: 0px auto;
+}
 .container .ql-editor {
   width: 8.5in;
   min-height: 11in;
@@ -23,14 +30,16 @@ body {
 }
 
 .container .ql-toolbar.ql-snow {
+  width: 100%;
   display: flex;
   justify-content: center;
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 10;
   z-index: 1;
+  padding: 13px 0px;
   background-color: #F3F3F3;
   border: none;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, .5);
 }
 
 @page {
@@ -53,5 +62,13 @@ body {
 
   .container .ql-toolbar.ql-snow {
     display: none;
+  }
+}
+@media (min-width: 408px) {
+  .container {
+      max-width: 100%;
+  }
+  .container .ql-toolbar.ql-snow {
+    z-index: 80;
   }
 }
