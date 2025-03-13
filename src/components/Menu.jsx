@@ -21,12 +21,12 @@ export default function Menu() {
   }, [user])
 
   const OpenArgito = (docId)=>{
-    window.location.replace(`https://localhost:3000/${docId}`)
+    window.location.replace(`https://lastnexus.vercel.app/${docId}`)
   }
 
   return (
     <header className=" sticky top-0 z-50 flex items-center px-4 py-2 shadow-md bg-white h-20">
-      <img onClick={()=> OpenArgito("")} src="../image/btextt.png" alt="" className='cursor-pointer object-cover h-8' />
+      <img onClick={()=> OpenArgito("")} src="../image/btextt.png"  alt="" className='cursor-pointer object-cover h-8' />
       <div id='searchId' className="mx-5 md:mx-20 flex flex-grow items-center px-2 py-2 bg-gray-100 text-gray-600 rounded-lg focus-within:text-gray-600 focus-within:shadow-md">
         <IoMdSearch size={30} color="gray" />
         <input type="text" placeholder="Search" className="flex-grow px-2 text-base bg-transparent outline-none" />
